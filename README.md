@@ -1,0 +1,2 @@
+# SingleInstanceDemo
+Android中singleInstance和taskAffinity的优先级对比
