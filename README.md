@@ -14,7 +14,7 @@
 - taskAffinity: same
 
 #### Manifest
-```
+```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="singleinstancedemo.zengyu.com.singleinstancedemo">
 
@@ -34,14 +34,14 @@
 ```
 
 #### Logcat
-```
+```shell
 E/DemoApplication: process id = 21205
 E/MainActivity: process id = 21205, task id = 1686
 E/SingleInstanceActivity: process id = 21205, task id = 1686
 ```
 
 #### Terminal
-```
+```shell
 $ adb shell dumpsys activity | grep singleinstancedemo.zengyu.com.singleinstancedemo | grep Record
       TaskRecord{8b7c011 #1686 A=singleinstancedemo U=0 StackId=1 sz=2}
         Run #1: ActivityRecord{da0ab3e u0 singleinstancedemo.zengyu.com.singleinstancedemo/.SingleInstanceActivity t1686}
@@ -63,7 +63,7 @@ taskAffinity的缺省值是包名，所以此处注册清单中我们设置了�
 - taskAffinity: different
 
 #### Manifest
-```
+```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="singleinstancedemo.zengyu.com.singleinstancedemo">
 
@@ -83,14 +83,14 @@ taskAffinity的缺省值是包名，所以此处注册清单中我们设置了�
 ```
 
 #### Logcat
-```
+```shell
 E/DemoApplication: process id = 21631
 E/MainActivity: process id = 21631, task id = 1690
 E/SingleInstanceActivity: process id = 21631, task id = 1691
 ```
 
 #### Terminal
-```
+```shell
 $ adb shell dumpsys activity | grep singleinstancedemo.zengyu.com.singleinstancedemo | grep Record
       TaskRecord{607a8af #1691 A=singleinstancedemo.zengyu.com.singleinstancedemo2 U=0 StackId=1 sz=1}
         Run #1: ActivityRecord{7d07683 u0 singleinstancedemo.zengyu.com.singleinstancedemo/.SingleInstanceActivity t1691}
@@ -109,7 +109,7 @@ $ adb shell dumpsys activity | grep singleinstancedemo.zengyu.com.singleinstance
 - taskAffinity: same
 
 #### Manifest
-```
+```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="singleinstancedemo.zengyu.com.singleinstancedemo">
 
@@ -129,14 +129,14 @@ $ adb shell dumpsys activity | grep singleinstancedemo.zengyu.com.singleinstance
 ```
 
 #### Logcat
-```
+```shell
 E/DemoApplication: process id = 22358
 E/MainActivity: process id = 22358, task id = 1698
 E/SingleInstanceActivity: process id = 22358, task id = 1698
 ```
 
 #### Terminal
-```
+```shell
 $ adb shell dumpsys activity | grep singleinstancedemo.zengyu.com.singleinstancedemo | grep Record
       TaskRecord{6107ebf #1699 A=singleinstancedemo.zengyu.com.singleinstancedemo U=0 StackId=1 sz=1}
         Run #1: ActivityRecord{3293570 u0 singleinstancedemo.zengyu.com.singleinstancedemo/.SingleInstanceActivity t1699}
@@ -155,7 +155,7 @@ $ adb shell dumpsys activity | grep singleinstancedemo.zengyu.com.singleinstance
 - taskAffinity: different
 
 #### Manifest
-```
+```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="singleinstancedemo.zengyu.com.singleinstancedemo">
 
@@ -175,14 +175,14 @@ $ adb shell dumpsys activity | grep singleinstancedemo.zengyu.com.singleinstance
 ```
 
 #### Logcat
-```
+```shell
 E/DemoApplication: process id = 22541
 E/MainActivity: process id = 22541, task id = 1702
 E/SingleInstanceActivity: process id = 22541, task id = 1703
 ```
 
 #### Terminal
-```
+```shell
 $ adb shell dumpsys activity | grep singleinstancedemo.zengyu.com.singleinstancedemo | grep Record
       TaskRecord{2ae4244 #1703 A=singleinstancedemo.zengyu.com.singleinstancedemo2 U=0 StackId=1 sz=1}
         Run #1: ActivityRecord{9f03f08 u0 singleinstancedemo.zengyu.com.singleinstancedemo/.SingleInstanceActivity t1703}
